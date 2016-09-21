@@ -34,6 +34,11 @@ describe('Algorithm', () => {
 			expect(myAlgorithm.sumOfSquareRoots).to.be.a('function');
 		});
 
+		it('should throw an error if a number less than 1 is entered', () => {
+			expect(myAlgorithm.sumOfSquareRoots.bind(this,-1)).to.throw(Error);
+
+		});
+
 		it('should return the sum of the square roots up until the number passed in to the nearest hundreth digit', () => {
 			expect(myAlgorithm.sumOfSquareRoots(2)).to.equal(2.41);
 			expect(myAlgorithm.sumOfSquareRoots(5)).to.equal(8.38);

@@ -2,9 +2,14 @@ module.exports = function () {
 
 	function createInitialArray(number) {
 		let returnArray = [];
+
+		if (number < 1) {
+			throw new Error('You must enter a number greater than 1');
+		}
 		for (var i = 1; i <= number; i++) {
 			returnArray[i-1] = i;
 		}
+		
 		return returnArray;
 	}
 
